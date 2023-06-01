@@ -6,12 +6,14 @@ message Test {
   uint64 number = 1;
 }
 
-message Contracts {
+message Contracts{
   repeated Contract contracts = 1;
 }
 
 message Contract {
-    string address = 1;
-    string timestamp = 2;
-    uint64 ordinal = 3;
+  string address = 1;
+  string creation_txn_hash = 2;
+  uint64 creation_block_number = 3;
+  string timestamp = 4;
+  uint64 ordinal = 5;
 }
